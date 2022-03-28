@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+</head>
+<body>
+<h1>Invoice</h1>
+
+Products
+<br/>
+Amount(Keyboard):
+<input type="text" id="Keyboard" name="Keyboard1" value=""/>PKR
+<br/>
+Amount(Mouse):
+<input type="text" id="Mouse" name="Mouse1" value=""/>PKR
+<br/>
+Amount(Monitor):
+<input type="text" id="Monitor" name="Monitor1" value=""/>PKR
+<br/>
+Discount:
+<input type="text" id="discount" name="discount1" value=""/>%
+<br/>
+Total:
+<input type="text" id="total" name="total1" value=""/>PKR
+<br/>
+<button onclick="calculate()">Calculate</button>
+
+<script>
+function calculate()
+{
+	var Keyboard=document.querySelector("#keyboard").value;
+	var Mouse=document.querySelector("#mouse").value;
+	var Monitor=document.querySelector("#monitor").value;
+	var discount_percentage=document.querySelector("#discount").value;
+	var sub_total=Number(keyboard)+Number(mouse)+Number(monitor);
+	var grand_total=sub_total-((discount_percentage/100)*sub_total);
+	document.querySelector("#total").value=grandtotal;
+	
+
+}
+
+
+
+</script>
+</body>
+</html>
